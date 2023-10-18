@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body data-bs-theme="light">
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between mb-3">
+      <h3 id="toggle" >Product List</h3>
+      <button id="create" class="btn btn-primary">Create Product</button>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>NO{ID}</th>
+          <th>Image</th>
+          <th>Product Name</th>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Qty</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <div id="loader" style="display: none;">Please wait....</div>
+      <tbody id="productList">
+
+      </tbody>
+    </table>
+  </div>
+
+  <div id="modal" class="modals">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h2 class="mb-3">Update Product</h2>
+      <form id="updateProduct" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="name_product" class="form-label">Product Name</label>
+          <input type="text" name="name_product" class="form-control" id="name_product"
+            placeholder="Name product">
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <label for="category_id class="form-label">Category</label>
+            <select class="form-select mb-3" aria-label="category" name="category_id">
+              <option selected>Select Category</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="image_product" class="form-label">Product Image</label>
+              <input class="form-control" type="file" id="image_product" name="image_product">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="amount" class="form-label">Amount</label>
+              <input type="number" name="amount" class="form-control" id="amount"
+                placeholder="Amount for product">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="qty" class="form-label">Qty</label>
+              <input type="number" name="qty" class="form-control" id="qty" placeholder="Qty for product">
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div> -->
+
+        <button class="btn btn-primary" type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+  <script src="./handleView.js"></script>
+  <script src="./preload.js"></script>
+  <script src="../node_modules/bootstrap//dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../node_modules/bootstrap//dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

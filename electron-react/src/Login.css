@@ -1,0 +1,93 @@
+#root {
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    padding: 0px;
+    align-items: center;
+    gap: 70px;
+    background: var(--color-background-100, #fff);
+}
+
+.login {
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    padding: 0px 74px;
+    align-items: center;
+    gap: 70px;
+}
+.image {
+    width: 582px;
+    height: 629.807px;
+    flex-shrink: 0;
+}
+
+.form-section {
+    display: flex;
+    height: 670px;
+    padding: 11px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+    flex: 1 0 0;
+    border-radius: 46px;
+    background: #3b004b;
+}
+
+.form-input {
+    display: flex;
+    padding: 5px 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 68px;
+    align-self: stretch;
+}
+
+.form-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+input::placeholder {
+height: 39px;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+input {
+    display: flex;
+    padding: 23px 12px;
+    align-items: flex-start;
+    gap: 23px;
+    align-self: stretch;
+    border-radius: 25px;
+    background: var(--color-background-100, #fff);
+    color: black;
+    font-size: 32px;
+}
+
+.btn-login {
+    display: flex;
+    padding: 23px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 30px;
+    background: #2e208a;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.register-link {
+    padding: 0;
+    margin: 0;
+}
