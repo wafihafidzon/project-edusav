@@ -7,6 +7,7 @@ use App\Models\Auction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\AuctionImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,19 @@ Route::controller(UserController::class)->group(function () {
     Route::put('user', 'update');
     Route::delete('user', 'destroy');
 });
+Route::controller(AuctionImageController::class)->group(function () {
+    // Route::post('auctions/{auctionId}/images', 'store');
+    Route::put('user', 'update');
+    Route::delete('user', 'destroy');
+});
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::get('user', [UserController::class, 'index']);
+
+Route::post('auctions/{auctionId}/images', [AuctionImageController::class, 'store']); 
+Route::get('auctions/{auctionId}/images', [AuctionImageController::class, 'index']); 
+// Route::get('/auctions/{auctionId}/images', 'AuctionImageController@index'); 
+// Route::delete('/auctions/images/{id}', 'AuctionImageController@destroy');
