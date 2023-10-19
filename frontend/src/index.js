@@ -10,8 +10,10 @@ let createWindow;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 1366,
-    height: 768,
+    width: 1600,
+    height: 1010,
+    maxWidth: 1600,
+    maxHeight: 1010,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -19,7 +21,7 @@ function createMainWindow() {
     },
   });
 
-  mainWindow.loadFile(path.join(__dirname, "login.html"));
+  mainWindow.loadFile(path.join(__dirname, "homepage.html"));
   app.isPackaged && Menu.setApplicationMenu(null);
 
   mainWindow.on("closed", () => {
